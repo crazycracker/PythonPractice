@@ -1,9 +1,9 @@
 from WithdrawAmount import *
-
+from BankAccount import *
 
 class MinimumBalanceAccount(BankAccount):
     def __init__(self, minimum_balance):
-        BankAccount.__init__(self)
+        BankAccount.__init__(self, minimum_balance)
         self.minimum_balance = minimum_balance
 
     @property

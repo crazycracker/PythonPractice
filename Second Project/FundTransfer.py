@@ -1,3 +1,0 @@
-class FundTransfer:
-    accounts = list()
-
