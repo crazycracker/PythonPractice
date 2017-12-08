@@ -1,4 +1,4 @@
-from InvalidAccountNumberException import *
+from BankingApp import InvalidAccountNumberException
 
 
 class Accounts:

@@ -14,7 +14,7 @@ class FundTransfer:
         FundTransfer.depositHistory.append(message)
         FundTransfer.completeHistory.append(message)
 
-    def fullHistory(self):
+    def getFullHistory(self):
         return FundTransfer.completeHistory
 
     def getWithDrawHistory(self):

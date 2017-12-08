@@ -1,5 +1,6 @@
-from WithdrawAmount import *
-from BankAccount import *
+from BankingApp import WithdrawAmount
+from BankingApp import BankAccount
+
 
 class MinimumBalanceAccount(BankAccount):
     def __init__(self, minimum_balance):

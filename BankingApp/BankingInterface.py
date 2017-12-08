@@ -1,8 +1,8 @@
-from MinimumBalanceAccount import MinimumBalanceAccount
-from Accounts import Accounts
-from WithdrawAmount import WithdrawAmount
-from DepositAmount import DepositAmount
-from FundTransfer import FundTransfer
+from BankingApp import MinimumBalanceAccount
+from BankingApp import Accounts
+from BankingApp import WithdrawAmount
+from BankingApp import DepositAmount
+from BankingApp import FundTransfer
 
 
 accounts = Accounts()
@@ -19,16 +19,16 @@ def accountCreation():
 
 def withDrawAmount():
     amount = input("Enter the amount to be withdrawn")
-    WithdrawAmount.withdraw(account, amount, minimum_balance)
+    WithdrawAmount.withdraw(account, amount, minimum_balance, fundTransfer)
 
 
 def depositAmount():
     balance = input("Enter the amount to be deposited")
-    DepositAmount.deposit(account, balance)
+    DepositAmount.deposit(account, balance, fundTransfer)
 
 
 def transactionHistory():
-    pass
+    fundTransfer.getFullHistory()
 
 def exitProgram():
     exit()
