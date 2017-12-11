@@ -1,0 +1,35 @@
+int solution(int vec[], int N){
+    int max_length, length;
+    max_length = length = 0;
+
+    int even, odd;
+    even = vec[0];
+    odd = vec[1];
+    length = 2;
+
+    for(int i = 2; i < N;){
+        if(even == vec[i]){
+            if(odd == vec[i+1]){
+                length += 2;
+                i += 2;
+            }else{
+                even = odd;
+                odd = vec[i];
+                i++;
+                length++;
+            }
+        }else{
+            even = odd;
+            odd = vec[i];
+            i++;
+            length = 2;
+        }
+
+        if(max_length < length)
+            max_length = length;
+    }
+   
+    if(max_length == 2)
+        max_length = 0;
+    return max_length;
+}
